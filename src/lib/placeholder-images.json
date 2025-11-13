@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-drone",
+      "description": "A large, advanced military-grade drone in flight against a dramatic sky.",
+      "imageUrl": "https://images.unsplash.com/photo-1551728926-9ee891bbb6b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZHJvbmUlMjBza3l8ZW58MHx8fHwxNzYzMDM3Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "drone sky"
+    },
+    {
+      "id": "capability-surveillance",
+      "description": "A sleek surveillance drone hovering over a rugged landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1633886580462-128c8696afd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkcm9uZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjMwMzAxMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "drone landscape"
+    },
+    {
+      "id": "capability-logistics",
+      "description": "A heavy-lift logistics drone carrying a payload container.",
+      "imageUrl": "https://images.unsplash.com/photo-1616684020144-553989066d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZHJvbmUlMjBjb250YWluZXJ8ZW58MHx8fHwxNzYzMDM3Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "drone container"
+    },
+    {
+      "id": "capability-tactical",
+      "description": "A compact tactical drone prepared for deployment in an urban environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1641576984484-ca329d1fc0bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkcm9uZSUyMHVyYmFufGVufDB8fHx8MTc2MzAzNzI5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "drone urban"
+    }
+  ]
 }
