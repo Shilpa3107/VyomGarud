@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { VyomGarudLogo } from "./vyomgarud-logo";
 import { Twitter, Linkedin, Github } from "lucide-react";
 import { Button } from "../ui/button";
 
@@ -16,10 +15,9 @@ export default function Footer() {
       <div className="container mx-auto py-8 sm:py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <VyomGarudLogo className="h-8 w-auto" />
             <span className="font-bold text-lg">VyomGarud</span>
           </div>
-          <p className="text-sm text-primary-foreground/70">
+          <p className="text-sm text-primary-foreground/70" suppressHydrationWarning>
             © {currentYear} VyomGarud Systems. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
