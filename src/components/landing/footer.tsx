@@ -10,6 +10,7 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto py-8 sm:py-12">
@@ -18,7 +19,7 @@ export default function Footer() {
             <VyomGarudLogo className="h-8 w-auto" />
           </div>
           <p className="text-sm text-primary-foreground/70">
-            © {new Date().getFullYear()} VyomGarud Systems. All rights reserved.
+            © {currentYear} VyomGarud Systems. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
             {socialLinks.map((social) => (
