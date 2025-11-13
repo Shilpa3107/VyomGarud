@@ -39,43 +39,10 @@ function AnimatedCapabilitiesGrid() {
     setIsMounted(true);
   }, []);
 
-  if (!isMounted) {
-    return (
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {capabilities.map((capability) => {
-                const image = PlaceHolderImages.find((img) => img.id === capability.id);
-                return (
-                    <Card key={capability.id} className="overflow-hidden">
-                        {image && (
-                            <div className="aspect-w-3 aspect-h-2">
-                                <Image
-                                    src={image.imageUrl}
-                                    alt={image.description}
-                                    data-ai-hint={image.imageHint}
-                                    width={600}
-                                    height={400}
-                                    className="object-cover w-full h-full"
-                                />
-                            </div>
-                        )}
-                        <CardHeader>
-                            <CardTitle>{capability.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <CardDescription>{capability.description}</CardDescription>
-                            <Button variant="link" className="px-0 mt-4 text-accent hover:text-accent/80">Learn More</Button>
-                        </CardContent>
-                    </Card>
-                );
-            })}
-        </div>
-    );
-  }
-
-  const cards = capabilities.map((capability, index) => {
+  const renderCard = (capability: (typeof capabilities)[0], isAnimated: boolean) => {
     const image = PlaceHolderImages.find((img) => img.id === capability.id);
-    const animationClass = "animate-in fade-in-0 slide-in-from-bottom-10";
-    const animationStyle = {animationDelay: `${index * 150}ms`, animationFillMode: 'backwards'};
+    const animationClass = isAnimated ? "animate-in fade-in-0 slide-in-from-bottom-10" : "opacity-0";
+    const animationStyle = isAnimated ? {animationDelay: `${capabilities.indexOf(capability) * 150}ms`, animationFillMode: 'backwards'} : {};
 
     return (
       <Card 
@@ -104,11 +71,11 @@ function AnimatedCapabilitiesGrid() {
         </CardContent>
       </Card>
     );
-  });
-
+  };
+  
   return (
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {cards}
+       {capabilities.map(capability => renderCard(capability, isMounted))}
     </div>
   )
 }

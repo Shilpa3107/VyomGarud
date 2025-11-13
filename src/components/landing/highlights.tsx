@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Cpu, ShieldCheck, Crosshair } from "lucide-react";
@@ -35,9 +36,9 @@ function AnimatedHighlightsGrid() {
     setIsMounted(true);
   }, []);
 
-  const highlightItems = highlights.map((highlight, index) => {
-    const animationClass = isMounted ? "animate-in fade-in-0 slide-in-from-bottom-10" : "";
-    const animationStyle = isMounted ? {animationDelay: `${index * 150}ms`, animationFillMode: 'backwards'} : {};
+  const renderHighlight = (highlight: Highlight, isAnimated: boolean) => {
+    const animationClass = isAnimated ? "animate-in fade-in-0 slide-in-from-bottom-10" : "opacity-0";
+    const animationStyle = isAnimated ? { animationDelay: `${highlights.indexOf(highlight) * 150}ms`, animationFillMode: 'backwards' } : {};
     
     return (
       <div 
@@ -52,11 +53,11 @@ function AnimatedHighlightsGrid() {
         <p className="text-muted-foreground">{highlight.description}</p>
       </div>
     );
-  });
+  };
   
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-      {highlightItems}
+      {highlights.map(highlight => renderHighlight(highlight, isMounted))}
     </div>
   )
 }
