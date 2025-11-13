@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
-import { DroneIcon } from "./drone-icon";
+import { VyomGarudLogo } from "./vyomgarud-logo";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -20,8 +20,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <DroneIcon className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg">VyomGarud</span>
+          <VyomGarudLogo className="h-8 w-auto text-primary" />
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -51,8 +50,7 @@ export default function Header() {
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between p-4 border-b">
                  <Link href="/" className="flex items-center gap-2" prefetch={false} onClick={() => setIsMenuOpen(false)}>
-                  <DroneIcon className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-lg">VyomGarud</span>
+                  <VyomGarudLogo className="h-8 w-auto text-primary" />
                 </Link>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">
