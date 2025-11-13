@@ -1,11 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-drone");
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <section id="hero" className="relative h-[calc(100vh-4rem)] w-full">
@@ -21,7 +29,9 @@ export default function Hero() {
       )}
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex h-full items-center justify-center">
-        <div className="container max-w-4xl text-center text-primary-foreground animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
+        <div 
+          className={`container max-w-4xl text-center text-primary-foreground transition-all duration-1000 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        >
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline">
             VyomGarud Systems
           </h1>
