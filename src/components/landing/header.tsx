@@ -21,6 +21,7 @@ export default function Header() {
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <VyomGarudLogo className="h-8 w-auto text-primary" />
+          <span className="font-bold text-lg">VyomGarud</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -51,6 +52,7 @@ export default function Header() {
               <div className="flex items-center justify-between p-4 border-b">
                  <Link href="/" className="flex items-center gap-2" prefetch={false} onClick={() => setIsMenuOpen(false)}>
                   <VyomGarudLogo className="h-8 w-auto text-primary" />
+                  <span className="font-bold text-lg">VyomGarud</span>
                 </Link>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">

@@ -17,6 +17,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <VyomGarudLogo className="h-8 w-auto" />
+            <span className="font-bold text-lg">VyomGarud</span>
           </div>
           <p className="text-sm text-primary-foreground/70">
             © {currentYear} VyomGarud Systems. All rights reserved.
