@@ -64,7 +64,7 @@ export default function Capabilities() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>{capability.description}</CardDescription>
-                  <Button variant="link" className="px-0 mt-4 text-accent hover:text-accent/80">Learn More</Button>
+                  <Button variant="link" className="px-0 mt-4 text-accent hover:text-accent/80" suppressHydrationWarning>Learn More</Button>
                 </CardContent>
               </Card>
             )

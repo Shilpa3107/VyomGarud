@@ -60,7 +60,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder="Your Name" {...field} suppressHydrationWarning />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -73,7 +73,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input placeholder="your.email@example.com" {...field} suppressHydrationWarning />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -96,7 +96,12 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" size="lg">
+        <Button
+          type="submit"
+          className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+          size="lg"
+          suppressHydrationWarning
+        >
           Send Message
         </Button>
       </form>
